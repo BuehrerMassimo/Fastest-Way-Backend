@@ -1,0 +1,26 @@
+{
+  "name": "FastestWayBackend",
+  "version": "0.0.1",
+  "description": "The unified monolith backend of the application.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "NODE_ENV=development nodemon index.js",
+    "test:unit": "mocha test/unit/**/*.spec.js",
+    "clean": "rm -rf node_modules/ && yarn install"
+  },
+  "author": "Massimo Buehrer, Kevin Kahl, Jonas Weimar",
+  "license": "ISC",
+  "private": false,
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "chai": "^4.2.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^8.1.3",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.8",
+    "morgan": "^1.10.0"
+  }
+}

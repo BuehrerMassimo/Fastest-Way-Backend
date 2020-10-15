@@ -1,0 +1,13 @@
+{
+	"BCRYPT": {
+		"ROUNDS_TO_SALT": 10
+	},
+	"CONNECTION_DETAILS": {
+		"URI": "//localhost:27017/",
+		"DB": "FastestWay"
+	},
+	"CERTIFICATES": {
+		"PRIVATE": "/src/config/certificates/jwt_private_key.pem",
+		"PUBLIC": "/src/config/certificates/jwt_public_key.pem"
+	}
+}
