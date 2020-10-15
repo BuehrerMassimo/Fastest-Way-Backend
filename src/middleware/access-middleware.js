@@ -19,10 +19,10 @@ exports.accessTokenRequired = (req, res, next) => {
 	}
 
 	const publicSignKey = fs.readFileSync(`${ APPLICATION_ROOT }${ CERTIFICATES.PUBLIC }`)
-	jwt.verify(BEARER[1], publicSignKey, function (err, decoded) {
+	jwt.verify(BEARER[1], publicSignKey, function (err, payload) {
 		if (err) return next( createError(401, "Token Verification Failed.") )
 
-		req.token = { payload: decoded }
+		req.token = { payload }
 		return next()
 	})
 }
